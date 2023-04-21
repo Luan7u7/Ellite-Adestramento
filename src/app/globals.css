@@ -4,18 +4,35 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 
 *{
   padding: 0;
   margin: 0;
-  border: none;
-  outline: none;
+  /* outline: 1px solid red; */
   box-sizing: border-box;
+  user-select: none;
 }
 
 .titulo_dog{
   font-size: 3.3rem;
   color: white;
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+}
+
+.l_blur{
+  background: linear-gradient(168.99deg, rgba(170, 95, 52, 1) 45.27%, rgba(97, 50, 24, 0.1) 109.82%);
+  filter: blur(50px);
+  border-radius: 100px;
+}
+
+.r_blur{
+  background: linear-gradient(187.89deg, rgb(108, 38, 22, 0.5) 75.44%, rgba(24, 4, 0, 0.1) 108.82%);
+  filter: blur(50px);
+  border-radius: 100px;
+  
+}
+
+.sd_blur{
+  box-shadow: -8px -4px 26px -9px rgba(192, 160, 143, 0.33), 3px 10px 26px -9px rgba(0, 0, 0, 0.7);
 }
