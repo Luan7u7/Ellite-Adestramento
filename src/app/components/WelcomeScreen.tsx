@@ -24,9 +24,9 @@ const WelcomeScreen: React.FC = () => {
         src="/dog.png"
         width={418}
         height={412}
-        quality={80}
+        quality={100}
         alt="foto do doguinho"
-        className="absolute left-0 top-36"
+        className="absolute left-0 top-[9.375rem]"
       />
 
       </main>
