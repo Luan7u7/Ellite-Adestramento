@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 
-const Teste: React.FC = () => {
+const WelcomeScreen: React.FC = () => {
 
   const [show, setShow] = useState<boolean>(false)
 
@@ -31,7 +31,7 @@ const Teste: React.FC = () => {
 
       </main>
 
-      <footer onTouchMove={showMenu} data-show={show} >
+      <footer onClick={showMenu} data-show={show} >
         
       <div className="w-32 h-1 bg-white p-[2px] rounded-full mt-2 z-10"></div>
 
@@ -61,4 +61,4 @@ const Teste: React.FC = () => {
   )
   
 }
-export default Teste
+export default WelcomeScreen

@@ -2,14 +2,14 @@
 import "./globals.css";
 import React from "react";
 import { NextPage } from "next";
-import Teste from "./components/Teste";
+import WelcomeScreen from "./components/WelcomeScreen";
 
 
 const Home: NextPage =() => {
 
   return (
     <>
-      <Teste />
+      <WelcomeScreen />
     </>
   );
 }
