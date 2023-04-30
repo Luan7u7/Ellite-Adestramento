@@ -16,7 +16,7 @@ const WelcomeScreen: React.FC = () => {
     <>
       <main className="w-screen h-screen bg-[#191616]">
 
-      <h1 className="titulo_dog font-ws font-semibold uppercase leading-[3.7rem] w-[19rem] text-right absolute top-4 right-3">
+      <h1 className="text-white text-[3.3rem] font-ws font-semibold uppercase leading-[3.7rem] w-[19rem] text-right absolute top-4 right-3">
         A melhor opção de educação para seu pet
       </h1>
 
@@ -24,7 +24,7 @@ const WelcomeScreen: React.FC = () => {
         src="/dog.png"
         width={418}
         height={412}
-        quality={90}
+        quality={80}
         alt="foto do doguinho"
         className="absolute left-0 top-36"
       />
@@ -39,7 +39,7 @@ const WelcomeScreen: React.FC = () => {
           agende sua consulta, as vagas acabam num piscar de olhos.
         </p>
 
-        <div className="flex justify-center items-center mt-5 w-[18.1875rem] h-[4.5rem] text-2xl font-dg text-white py-7 px-[2.625rem] rounded-[2rem] bg-[#475469]  z-10 btn_blur">
+        <div className="flex justify-center items-center mt-10 w-[18.1875rem] h-[4.5rem] text-2xl font-dg text-white py-7 px-[2.625rem] rounded-[2rem] bg-[#475469]  z-10 btn_blur">
           começar
         </div>
 

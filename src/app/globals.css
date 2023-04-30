@@ -59,13 +59,14 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
+
 [data-show="false"] {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100vw;
-  height: 5rem;
+  height: 7rem;
 
   background-color: #2B2B2B;
 
