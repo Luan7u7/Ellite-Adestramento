@@ -2,5 +2,6 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "diffEditor.wordWrap": "inherit",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "material-icon-theme.activeIconPack": "react"
 }

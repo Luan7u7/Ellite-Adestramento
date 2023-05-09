@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -13,9 +12,18 @@ module.exports = {
     fontFamily: {
       'ws': ['Work Sans', 'sans-serif'],
       'dg': ['Didact Gothic', 'sans-serif'],
+      'po': ['Poiret One', 'sans-serif'],
+      'rj': ['Rajdhani', 'sans-serif'],
     },
 
-    extend: {},
+    extend: {
+      fontFamily: {
+        'ws': ['Work Sans', 'sans-serif'],
+        'dg': ['Didact Gothic', 'sans-serif'],
+        'po': ['Poiret One', 'sans-serif'],
+        'rj': ['Rajdhani', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
