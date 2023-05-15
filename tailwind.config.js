@@ -17,12 +17,7 @@ module.exports = {
     },
 
     extend: {
-      fontFamily: {
-        'ws': ['Work Sans', 'sans-serif'],
-        'dg': ['Didact Gothic', 'sans-serif'],
-        'po': ['Poiret One', 'sans-serif'],
-        'rj': ['Rajdhani', 'sans-serif'],
-      },
+     
     },
   },
   plugins: [],

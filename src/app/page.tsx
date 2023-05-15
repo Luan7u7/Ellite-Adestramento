@@ -19,7 +19,7 @@ const Home: NextPage =() => {
     <>
       <main className="w-screen h-screen bg-[#191616]">
 
-      <h1 className="text-white text-[3.3rem] font-ws font-semibold uppercase leading-[3.7rem] w-[19rem] text-right absolute top-4 right-3">
+      <h1 className="text-white text-[3.3rem] font-ws font-bold uppercase leading-[3.7rem] w-[19rem] text-right absolute top-4 right-3">
         A melhor opção de educação para seu pet
       </h1>
 
