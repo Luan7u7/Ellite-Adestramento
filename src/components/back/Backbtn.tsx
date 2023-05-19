@@ -12,7 +12,7 @@ const Back = () => {
   return(
       <button 
       type="button"
-      className="border rounded-lg px-2 bg-zinc-500 "
+      className={`px-2 text-lg text-white`}
       onClick={back}>
         back
       </button>

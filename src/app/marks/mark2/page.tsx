@@ -6,14 +6,17 @@ import Option from '@/components/card/Option';
 
 
 const MarkSecond: React.FC = () => {
+
+  const goals = ['obediência','banheiro','vicio','modos','latido','xixi','intolerância','passeio','trauma','educação','raiva','social','comida','controle','medo']
+
   return (
     <>
       <div>
         <h1>2 °SEGUNDA TELA DE AGENDAMENTO</h1>
       </div>
 
-      <Card name='apd'>
-        <Option name='op' id='a' />
+      <Card tittle='sa'>
+        {goals.map((goal, index) =>(<Option name={goal} id={goal+'id'} key={index}/>))}
       </Card>
 
       <Back/>

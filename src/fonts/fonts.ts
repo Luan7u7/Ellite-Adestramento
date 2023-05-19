@@ -1,16 +1,24 @@
-import {Poiret_One} from '@next/font/google'
+import {Poiret_One, Didact_Gothic, Raleway} from 'next/font/google'
+import localFont from 'next/font/local'
 
 
-import localFont from '@next/font/local';
+ const cocomat = localFont({ src: './Cocomat-Light.ttf' });
  
-// define your variable fonts
-const poiretOne = Poiret_One({
-  display: 'swap',
+ const PoiretOne = Poiret_One({
   weight: '400',
-  subsets: ['latin']
-});
-// define 2 weights of a non-variable font
+  subsets: ['latin'],
+})
 
-const cocomat = localFont({ src: './Cocomat-Light.ttf' });
- 
-export { poiretOne, cocomat };
+ const DidactGotic = Didact_Gothic({
+  weight: '400',
+  subsets: ['latin'],
+  
+})
+
+ const raleway = Raleway({
+  weight: '200',
+  subsets: ['latin'],
+})
+
+
+export  { PoiretOne, DidactGotic, raleway, cocomat }

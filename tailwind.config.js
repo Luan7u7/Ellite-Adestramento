@@ -10,14 +10,13 @@ module.exports = {
   theme: {
 
     fontFamily: {
-      'ws': ['Work Sans', 'sans-serif'],
-      'dg': ['Didact Gothic', 'sans-serif'],
-      'po': ['Poiret One', 'sans-serif'],
-      'rj': ['Rajdhani', 'sans-serif'],
+      
     },
 
     extend: {
-     
+     colors: {
+      'mark-orange' : '#d36d34'
+     },
     },
   },
   plugins: [],

@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ButtonHTMLAttributes } from 'react';
 
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   name: string
   url: string
@@ -21,7 +22,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   return (
       <button
       type='button'
-      className='border rounded-lg px-2 bg-zinc-500'
+      className={`  px-2 text-[#ffffff5d] text-xl `}
       onClick={next}
       {...rest}>
         {name}

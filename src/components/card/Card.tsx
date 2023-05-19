@@ -1,26 +1,51 @@
-import React, { Children, ReactNode } from 'react';
 
-const goals = ['obediência','banheiro','vicio','modos','latido','xixi','intolerância','passeio','trauma','educação','raiva','social','comida','controle','medo']
-  
-interface cardProps   {
-  name:string
+
+import React from 'react';
+
+
+interface cardProps {
+  tittle: string,
+  children: React.ReactNode,
+  bottom?: number,
+  up?: number,
+  rl?: number,
+  w?: string,
+  h?: string
 }
 
-const Card:  React.FC<cardProps> = ({name}, Children: ReactNode) => {
+
+const Card: React.FC<cardProps> = ({tittle, children, bottom, rl, w, h }) => {
   return (
     <>
-      <div 
-        className={`flex flex-col justify-center items-center w-[22.75rem] h-[20.3125rem] bg-[#505050b2] rounded-[32px] backdrop-blur-[15px] shadow-[4px_4px_10px_#0000003f]`}>
+      {/* orientação tela */}
+      <div className={`flex flex-col justify-center items-center relative z-10 w-screen h-fit`}>
 
-        <h2>
-          {name}
-        </h2>
+        {/* orientação box */}
+        <div className=' relative '>
 
-        <form 
-          className={`flex flex-none flex-wrap justify-around items-center w-[20.75rem] h-[13.625rem]`}>
-          {Children}
-        </form>
+          {/* cinza */}
+          <div className={`flex flex-col justify-center items-center relative w-[22.75rem] h-fit gap-5 bg-[#32323285] rounded-[32px] backdrop-blur-[15px] shadow-[1px_1px_10px_#000000b5] z-10`}>
+
+            <h2 className={` text-[1.75rem] text-white  mt-[2.375rem]`}>
+              {tittle}
+            </h2>
+
+            <form className={`flex flex-none flex-wrap justify-around items-center w-[20.75rem] h-fit gap-[10px] mb-5 z-10`}>
+              {children}
+            </form>
+
+          </div>
+          {/* cinza */}
+
+          {/* laranja */}
+            <div className={`absolute ${w} ${h} bg-mark-orange -bottom-1 -right-1 rounded-[32px] z-0`} />
+          {/* laranja */}
+
+        </div>
+        {/* orientação box */}
+
       </div>
+      {/* orientação tela */}
     </>
   );
 }
