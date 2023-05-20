@@ -9,16 +9,16 @@ import localFont from 'next/font/local'
   subsets: ['latin'],
 })
 
-//  const DidactGotic = Didact_Gothic({
-//   weight: '400',
-//   subsets: ['latin'],
+ const DidactGotic = Didact_Gothic({
+  weight: '400',
+  subsets: ['latin'],
   
-// })
+})
 
-//  const raleway = Raleway({
-//   weight: '200',
-//   subsets: ['latin'],
-// })
+ const raleway = Raleway({
+  weight: '200',
+  subsets: ['latin'],
+})
 
 
-export  { PoiretOne, cocomat }
+export  { PoiretOne, cocomat, DidactGotic, raleway }

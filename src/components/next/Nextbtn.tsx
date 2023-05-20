@@ -3,6 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ButtonHTMLAttributes } from 'react';
+import { DidactGotic } from '@/fonts/fonts';
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -22,7 +23,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   return (
       <button
       type='button'
-      className={`  px-2 text-[#ffffff5d] text-xl `}
+      className={` ${DidactGotic.className} px-2 text-[#ffffff5d] text-xl `}
       onClick={next}
       {...rest}>
         {name}
