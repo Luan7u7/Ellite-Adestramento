@@ -6,7 +6,7 @@ import Card from '@/components/card/Card';
 import Option from '@/components/card/Option';
 import LinkNext from '@/components/link/LinkNext';
 import { PoiretOne, cocomat } from '@/fonts/fonts';
- 
+
 
 const MarkFirst: NextPage = () => {
   

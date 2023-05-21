@@ -1,6 +1,5 @@
 
 
-import { DidactGotic } from '@/fonts/fonts';
 import React from 'react';
 
 interface optionProps {
@@ -19,7 +18,7 @@ const Option: React.FC<optionProps> = ({name, id}) => {
           id={id} 
           className={`hidden`}/>
         <span 
-          className={`${DidactGotic.className} flex items-center justify-around w-[6.125rem] border-[0.5px] border-[#dce0e561] rounded-[22px] py-3 px-[0.75rem] text-[#DCE0E5]`}>
+          className={` flex items-center justify-around w-[6.125rem] border-[0.5px] border-[#dce0e561] rounded-[22px] py-3 px-[0.75rem] text-[#DCE0E5]`}>
             {name}
         </span>
     </label>

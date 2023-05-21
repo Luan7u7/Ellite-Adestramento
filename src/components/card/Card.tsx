@@ -1,6 +1,5 @@
 
 
-import { raleway } from '@/fonts/fonts';
 import React from 'react';
 
 
@@ -27,7 +26,7 @@ const Card: React.FC<cardProps> = ({tittle, children, bottom, rl, w, h }) => {
           {/* cinza */}
           <div className={`flex flex-col justify-center items-center relative w-[22.75rem] h-fit gap-5 bg-[#32323285] rounded-[32px] backdrop-blur-[15px] shadow-[1px_1px_10px_#000000b0] z-10`}>
 
-            <h2 className={`${raleway.className} text-[1.75rem] text-white  mt-[2.375rem]`}>
+            <h2 className={` text-[1.75rem] text-white  mt-[2.375rem]`}>
               {tittle}
             </h2>
 
