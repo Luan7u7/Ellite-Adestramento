@@ -3,10 +3,12 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ButtonHTMLAttributes } from 'react';
+import { preload } from 'react-dom';
+import { poiretOne } from '@/fonts/fonts';
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
-  name: string
+  name: any
   url: string
 }
 
@@ -16,16 +18,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
   const router = useRouter()
   const next = ()=>{
+    preload
     router.push(url)
   }
 
   return (
       <button
       type='button'
-      className={` px-2 text-[#ffffff5d] text-xl `}
       onClick={next}
       {...rest}>
-        {name}
+        {name }
       </button>
   );
 }
