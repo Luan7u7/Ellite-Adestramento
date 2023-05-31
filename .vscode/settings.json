@@ -2,7 +2,7 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "diffEditor.wordWrap": "inherit",
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrap": "on",
   "material-icon-theme.activeIconPack": "react",
   "prettier.proseWrap": "preserve",
   "editor.wrappingIndent": "same",

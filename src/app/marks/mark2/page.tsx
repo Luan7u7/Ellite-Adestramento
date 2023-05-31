@@ -10,7 +10,7 @@ const MarkSecond: React.FC = () => {
   
 
   return (
-    <>
+    <div className='w-full h-full animate-loading delay-75'>
       <div
         className={`relative w-screen h-[17.875rem] flex flex-row`}>
         <div
@@ -32,19 +32,26 @@ const MarkSecond: React.FC = () => {
 
       <Card 
         tittle="reserve dois dias por semana para as aulas"
-        w=''
-        h=''
-        color=''
-        rl=''
-        up=''
-        bottom=''
-        
+        cardW="w-[22.75rem]"
+        cardH="h-[11.25rem]"
+        cardBG='bg-[#505050B2]'
+        spanW='w-[19.25rem]'
+        spanH='h-[7.5625rem]'
+        spanColor="bg-[#F2B14F]"
+        spanRL="-left-[0.18125rem]"
+        spanUp='-top-[0.25rem]'
         >
 
       </Card>
 
-      <Next name="próximo" url="/marks/mark3" className="text-white" />
-    </>
+      <div className='mt-10 flex justify-center'>
+        <Next
+        name="próximo" 
+        url="/marks/mark3" 
+        className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl font-dg text-white rounded-[1rem] bg-[#f2b14f] btn_blur`}
+        />
+      </div>
+    </div>
   );
 }
 

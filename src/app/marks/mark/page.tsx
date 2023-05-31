@@ -13,7 +13,7 @@ const Mark: NextPage = () => {
   const goals = ['obediência','banheiro','vicio','modos','latido','xixi','intolerância','passeio','trauma','educação','raiva','social','comida','controle','medo']
 
   return (
-    <main className={`animate-loading delay-75`}>
+    <div className='w-full h-full animate-loading delay-75'>
 
       <div className={` flex w-screen relative justify-start items-start pt-2`}>
         <span
@@ -35,12 +35,15 @@ const Mark: NextPage = () => {
       </div>
 
       <Card 
-        tittle="Qual seu foco ?" 
-        w="w-[18rem]" 
-        h="h-[6.8125rem]" 
-        color='bg-mark-orange' 
-        bottom='-bottom-1' 
-        rl='-right-1'
+        tittle="Qual seu foco ?"
+        cardW='w-[22rem]'
+        cardH='h-[fit]'
+        cardBG='bg-[#505050B2]'
+        spanW="w-[18rem]" 
+        spanH="h-[6.8125rem]" 
+        spanColor='bg-mark-orange' 
+        spanBottom='-bottom-1' 
+        spanRL='-right-1'
         >
         {
           goals.map((goal, index) => (
@@ -57,11 +60,9 @@ const Mark: NextPage = () => {
         <Next 
         name="próximo" 
         url="/marks/mark2" 
-        className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl font-dg text-white rounded-[1rem] bg-[#ae5532e9] btn_blur`}
-          
-        />
+        className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl text-white rounded-[1rem] bg-[#ae5532e9] btn_blur`}/>
       </div>
-    </main>
+    </div>
   ); 
 }
 
