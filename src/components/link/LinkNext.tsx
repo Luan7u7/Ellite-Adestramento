@@ -5,21 +5,19 @@ import Link from 'next/link';
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
-  url: string
+  url: string,
+  bg: string
 }
 
 
 
- const LinkNext: React.FC<ButtonProps> = ({url}) => {
+ const LinkNext: React.FC<ButtonProps> = ({url, bg}) => {
 
   return (
-      <div 
-      className={``}>
-        <Link href={url}
-        className={`px-2 text-[#ffffff5d] text-xl`}>
+      <Link href={url} prefetch={false}
+        className={`text-center w-[10rem] h-[3.5rem] p-2 rounded-[1rem] text-[#ffff] text-xl ${bg} btn_blur`}>
           próximo
-        </Link>
-      </div>
+      </Link>
   );
 }
 

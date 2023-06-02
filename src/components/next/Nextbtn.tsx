@@ -4,7 +4,6 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ButtonHTMLAttributes } from 'react';
 import { preload } from 'react-dom';
-import { poiretOne } from '@/fonts/fonts';
 
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{

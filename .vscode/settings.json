@@ -7,5 +7,6 @@
   "prettier.proseWrap": "preserve",
   "editor.wrappingIndent": "same",
   "html.format.wrapLineLength": 80,
-  "workbench.editor.wrapTabs": true
+  "workbench.editor.wrapTabs": true,
+  "workbench.colorTheme": "Aura Dark"
 }

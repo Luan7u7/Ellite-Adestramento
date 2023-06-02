@@ -5,9 +5,13 @@ import { NextPage } from 'next';
 import Card from '@/components/card/Card';
 import Option from '@/components/card/Option';
 import { poiretOne, cocomat } from '@/fonts/fonts';
+import Mock from '@/mock/Mock';
+import Adornment from '@/components/adornment/Adornment';
+import ContainerFull from '@/components/Containers/Container';
+import LinkNext from '@/components/link/LinkNext';
 
 
-const Mark: NextPage = () => {
+const Mark: NextPage =  () => {
   
 
   const goals = ['obediência','banheiro','vicio','modos','latido','xixi','intolerância','passeio','trauma','educação','raiva','social','comida','controle','medo']
@@ -34,33 +38,54 @@ const Mark: NextPage = () => {
         </p>
       </div>
 
-      <Card 
+      <ContainerFull>
+        <Card 
         tittle="Qual seu foco ?"
         cardW='w-[22rem]'
         cardH='h-[fit]'
         cardBG='bg-[#505050B2]'
+        >
+         
+          
+          <Mock>
+            {
+              goals.map((goal, index) => 
+                (
+                  <Option name={goal} 
+                  id={goal + "id"} 
+                  key={index} 
+                  />
+                )
+              )
+            }
+          </Mock>
+
+           
+      </Card>
+      <Adornment 
         spanW="w-[18rem]" 
         spanH="h-[6.8125rem]" 
         spanColor='bg-mark-orange' 
-        spanBottom='-bottom-1' 
-        spanRL='-right-1'
-        >
-        {
-          goals.map((goal, index) => (
-            <Option name={goal} 
-            id={goal + "id"} 
-            key={index} 
-            />
-           )
-          )
-        }
-      </Card>
+        spanUB='-bottom-1' 
+        spanRL='right-[0.35rem]'
+        />
 
-      <div className="mt-10 flex justify-center">
+
+
+
+        
+      </ContainerFull>
+
+      
+
+      <div className="mt-10 flex flex-col items-center gap-3 justify-center">
+
+        <LinkNext bg='bg-[#ae5532e9]' url='/marks/mark2'/>
+
         <Next 
         name="próximo" 
         url="/marks/mark2" 
-        className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl text-white rounded-[1rem] bg-[#ae5532e9] btn_blur`}/>
+        className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl mb-6 text-white rounded-[1rem] bg-[#ae5532e9] btn_blur`}/>
       </div>
     </div>
   ); 
