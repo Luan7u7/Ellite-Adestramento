@@ -10,7 +10,7 @@ export default function RootLayout({
     <html lang="pt">
       <body>
         {/* <Heade /> */}
-        <main className="bg-[#191616] w-screen h-full">
+        <main className="bg-[#191616] w-screen h-screen overflow-x-hidden">
           {children}
         </main>
       </body>

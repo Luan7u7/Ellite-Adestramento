@@ -3,7 +3,6 @@
 import React, { useState } from "react"
 import { NextPage } from "next"
 import Image from 'next/image';
-import Link from 'next/link';
 import Next from "@/components/next/Nextbtn";
 import { workSans } from "@/fonts/fonts";
 

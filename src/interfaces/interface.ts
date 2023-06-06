@@ -1,5 +1,6 @@
 export interface generalProps{
   tittle?: string,
+  color?: string,
   children?: React.ReactNode,
   cardW?: string,
   cardH?: string,
@@ -9,4 +10,16 @@ export interface generalProps{
   spanRL?: string,
   spanW?: string,
   spanH?: string,
+  position?: string,
+  topOrBottom?: string,
+  leftOrRight?: string,
+  round?: string,
+  zI?: string,
+  shadow?: string,
+  fCenter?: string,
+  size?: string,
+  font?: string,
+  spacing?: string,
+  gap?: string,
+  
 }
