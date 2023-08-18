@@ -1,9 +1,8 @@
 import React from 'react';
-import Option from '@/components/card/Option';
-import { generalProps } from '@/interfaces/interface';
+import { generalProps } from '@/interfaces';
 
 
-const Form: React.FC<generalProps> = ({children, color, gap}) => {
+export const Form: React.FC<generalProps> = ({children, color, gap}) => {
   return (
     <>
       
@@ -16,5 +15,3 @@ const Form: React.FC<generalProps> = ({children, color, gap}) => {
 
   )
 }
-
-export default Form;

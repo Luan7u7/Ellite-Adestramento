@@ -1,5 +1,4 @@
 import '../globals.css'
-// import Heade from "@/components/heade/Heade"
 
 export default function RootLayout({
   children,
@@ -8,9 +7,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
+      <head>
+
+      </head>
       <body>
-        {/* <Heade /> */}
-        <main className="bg-[#191616] w-screen h-screen overflow-x-hidden">
+        <main className="bg-[#191616] w-screen mx-auto h-screen overflow-x-hidden">
           {children}
         </main>
       </body>

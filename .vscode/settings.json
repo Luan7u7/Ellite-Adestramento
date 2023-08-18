@@ -2,11 +2,16 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "diffEditor.wordWrap": "inherit",
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "wordWrapColumn",
   "material-icon-theme.activeIconPack": "react",
   "prettier.proseWrap": "preserve",
-  "editor.wrappingIndent": "same",
+  "editor.wrappingIndent": "deepIndent",
   "html.format.wrapLineLength": 80,
   "workbench.editor.wrapTabs": true,
-  "workbench.colorTheme": "Aura Soft Dark"
+  "workbench.colorTheme": "ceb8c11f-f736-420b-962b-fc0db26b3708",
+  "editor.autoIndent": "advanced",
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.wordWrapColumn": 70,
+  "notebook.output.wordWrap": false,
+  "chat.editor.wordWrap": "on"
 }

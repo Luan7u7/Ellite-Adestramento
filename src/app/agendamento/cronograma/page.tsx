@@ -1,14 +1,8 @@
 import React from 'react';
-import Next from '@/components/next/Nextbtn'
-import Card from '@/components/card/Card';
+import Next from '@/components/Nextbtn'
 import { poiretOne, ralewayMD } from '@/fonts/fonts';
-import LinkNext from '@/components/link/LinkNext';
-import ContainerFull from '@/components/Containers/ContainerFull';
-import Form from '@/components/forms/Form';
-import Option from '@/components/card/Option';
-import Adornment from '@/components/adornment/Adornment';
-import AlignCenter from '@/components/Containers/AlignCenter';
-
+import LinkNext from '@/components/LinkNext';
+import {Card, Adornment, ContainerFull, AlignCenter, Form, Option} from '@/components'
 
 
 const MarkSecond: React.FC = () => {
@@ -21,7 +15,8 @@ const MarkSecond: React.FC = () => {
     <>
       <div className='w-full h-full animate-loading delay-75'>
         <div
-          className={`relative w-screen h-[17.875rem] flex flex-row`}>
+          className={`relative w-screen h-[17.875rem] flex flex-row `}>
+
           <div
             className={`absolute -left-[9.9125rem] top-[4.3rem] w-[14.3125rem] h-[5.9375rem] bg-[#dda248] rounded-[48px] -rotate-45 z-20 shadow-[11px_8px_14px_#0000003a]`}
           />

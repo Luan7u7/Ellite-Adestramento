@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components{
+  .button{
+    @apply px-4 py-2 font-light tracking-tight rounded-md shadow-md text-zinc-200 bg-red-500
+  }
+}
 
 *{
   padding: 0;
@@ -10,7 +16,13 @@
   /* outline: 1px solid red; */
   box-sizing: border-box;
   user-select: none;
+  color: white;
 }
+
+
+/* html{
+  font-size: 62.5%;
+} */
 
 
 .l_blur{
@@ -80,7 +92,41 @@
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5)
 }
 
-/* 
-input:checked ~ span{
-  background-color: #D36E35;
-} */
+.WEEK-DAYS div{
+  width: calc(21.2rem / 7);
+  font-size: 1rem;
+  display: flex;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.DAYS div{
+  /* background-color: #505050; */
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(25.2rem / 7);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.6s;
+}
+
+.DAYS div:hover:not(.TODAY){
+  /* background-color: #262626; */
+  border: 0.2rem solid #167e56;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.PREV-DAYS, .NEXT-DAYS{
+  opacity: 0.3;
+}
+
+.TODAY{
+  background-color: #167e56;
+  border-radius: 4px;
+  color: white;
+}

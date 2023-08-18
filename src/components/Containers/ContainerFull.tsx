@@ -7,13 +7,12 @@ interface containerProps {
   flex?: string,
 }
 
-const ContainerFull: React.FC<containerProps> = ({ children, flex= "flex-col", color, zindex }) => {
+export const ContainerFull: React.FC<containerProps> = ({ children, color, zindex }) => {
   return(
-    <div className={`w-screen h-fit ${color} relative flex ${flex} justify-center items-center ${zindex} pb-[2.8125rem]`}>
+    <div id='CONTAINERFULL' className={`w-screen h-screen ${color} relative flex flex-col justify-center items-center ${zindex} pb-[2.8125rem]`}>
      {children}
     </div>
   )
 }
 
-export default ContainerFull;
 

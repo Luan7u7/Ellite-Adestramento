@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calendar</title>
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      /* outline: 1px solid #494949; */
+    }
+
+    html{
+      font-size: 62.5%;
+    }
+
+
+    .TELA{
+      width: 100vw;
+      height: 100vh;
+      background-color: #12121F;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .CONTAINER{
+      background-color: transparent;
+    }
+
+    .CARD{
+      background-color: #FFF;
+      width: 30rem;
+      height: fit-content;
+      border: solid 0.1rem #747474;
+      border-radius: 8px;
+      overflow: hidden;
+      /* padding: 10px; */
+      display: flex;
+      flex-direction: column;
+      box-shadow: 5px 5px 30px #000000aa, -5px -5px 30px #393939;
+    }
+
+    .CALENDAR{
+      /* background-color: yellow; */
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .HEADER{
+      background-color: rgb(60, 117, 95);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+
+    .HEADER-NAV{
+      /* background-color: blue; */
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+    }
+
+    .HEADER-CAPTION{
+      /* background: orangered; */
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+
+    button{
+      background: none;
+      border: 1px solid #d7d7d7;
+      padding: 0.6rem 1rem;
+      border-radius: 24px;
+    }
+
+    .TODAY-DATE{
+      color: #000;
+      font-size: 2rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding-bottom: 1rem;
+    }
+
+    .BODY{
+      background-color: #2c3150;
+    }
+
+    .WEEK-DAYS{
+      /* background-color: #a03030; */
+      width: 100%;
+      height: 3rem;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .WEEK-DAYS div{
+      width: calc(29.2rem / 7);
+      font-size: 1.5rem;
+      display: flex;
+      color: #cff;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .DAYS{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.2rem;
+    }
+
+    .DAYS div{
+      /* background-color: #505050; */
+      font-size: 1.4rem;
+      margin: 0.3rem;
+      width: calc(25.2rem / 7);
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: background-color 0.6s;
+    }
+
+    .DAYS div:hover:not(.TODAY){
+      /* background-color: #262626; */
+      border: 0.2rem solid #167e56;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .PREV-DAYS, .NEXT-DAYS{
+      opacity: 0.3;
+    }
+
+    .TODAY{
+      background-color: #167e56;
+      border-radius: 4px;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="TELA">
+    <div class="CONTAINER">
+      <div class="CARD">
+        <div class="CALENDAR">
+          <div class="HEADER" >
+            <div class="HEADER-NAV">
+              <button class="LEFT">left</button>
+                <h1 class="MES"></h1>
+              <button class="RIGHT">right</button>
+            </div><!--HEADER-NAV-->
+        
+            <div class="HEADER-CAPTION">
+              <p class="TODAY-DATE">dia atual</p>
+            </div><!--HEADER-CAPTION-->
+            
+          </div><!--HEADER-->
+
+          <div class="BODY">
+            <div class="WEEK-DAYS">
+              <div>dom</div>
+              <div>seg</div>
+              <div>ter</div>
+              <div>qua</div>
+              <div>qui</div>
+              <div>sex</div>
+              <div>sab</div>
+            </div>
+            <div class="DAYS">
+              
+            </div><!--DAYS-->
+          </div><!--BODY-->
+
+        </div><!--CALENDAR-->
+      </div><!--CARD-->
+    </div><!--CONTAINER-->
+
+
+  </div><!--TELA-->
+  
+
+  <script>
+
+    console.log("doa");
+
+    const date = new Date();
+    
+    const renderCalendar = () => {
+
+      date.setDate(1);
+
+      const monthDays = document.querySelector(".DAYS");
+
+      const lastDay = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate();
+
+      const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+
+      const firstDayIndex = date.getDay();
+
+      const lastDayIndex = new Date(
+        date.getFullYear(),
+        date.getMonth() + 1,
+        0
+      ).getDay();
+
+      const nextDays = 7 - lastDayIndex - 1;
+
+      const months = [
+        "Janeito",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Março",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outrubro",
+        "Novembro",
+        "Dezembro",
+      ]
+      
+      document.querySelector(".MES").innerHTML = months[date.getMonth() +1];
+      document.querySelector(".TODAY-DATE").innerHTML = new Date().toDateString();
+
+      let days = "";
+
+      for(let x = firstDayIndex; x > 0; x--){
+        days += `<div class="PREV-DAYS">${prevLastDay - x + 1}</div>`;
+      }
+
+      for(let i = 1; i <= lastDay; i++){
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()){
+          days += `<div class="TODAY">${i}</div>`;
+        }else {
+          days += `<div>${i}</div>`;
+        }
+      }
+
+      for(let j = 1; j <= nextDays; j++){
+        days += `<div class="NEXT-DAYS"> ${j} </div>`;
+        monthDays.innerHTML = days;
+      }
+
+    }
+
+    document.querySelector(".LEFT").addEventListener("click", () => {
+      date.setMonth(date.getMonth() -1);
+      renderCalendar();
+    });
+
+    document.querySelector(".RIGHT").addEventListener("click", () => {
+      date.setMonth(date.getMonth() +1);
+      renderCalendar();
+    });
+
+    renderCalendar();
+
+  </script>
+</body>
+</html>

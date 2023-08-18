@@ -1,14 +1,10 @@
 import React from 'react';
-import Next from '@/components/next/Nextbtn'
-import Card from '@/components/card/Card';
-import Adornment from '@/components/adornment/Adornment';
-import ContainerFull from '@/components/Containers/ContainerFull';
-import LinkNext from '@/components/link/LinkNext';
+import Next from '@/components/Nextbtn'
+import LinkNext from '@/components/LinkNext';
 import { didactGotic, poiretOne, ralewayEX } from '@/fonts/fonts';
-import AlignCenter from '@/components/Containers/AlignCenter';
-import Form from '@/components/forms/Form';
 import Image from 'next/image';
-import Button from '@/components/buttons/Button';
+import Button from '@/components/Button';
+import {Card, Adornment, ContainerFull, AlignCenter, Form, Option} from '@/components'
 
 const MarkThird: React.FC = () => {
 
@@ -20,6 +16,7 @@ const MarkThird: React.FC = () => {
       <ContainerFull flex='flex-row'>
 
         <AlignCenter fCenter='flex justify-around items-center'> 
+
           <h1 className={`${poiretOne.className} relative top-[0.75rem] left-[2.125rem] text-white text-[4rem] w-[14.82rem] h-[9.75rem] leading-[3.375rem]`}>
             nos vamos até você
           </h1>
@@ -32,7 +29,7 @@ const MarkThird: React.FC = () => {
             height={114}
             quality={100}
             priority={true}
-            className='z-20 absolute top[6px] right-[67px]'
+            className='z-20 absolute top-0 right-[4.7rem]'
             />
 
             <Adornment
@@ -74,8 +71,6 @@ const MarkThird: React.FC = () => {
           
         </AlignCenter>
 
-          
-     
       </ContainerFull>
 
       {/* 2°parte */}

@@ -7,7 +7,7 @@ import { poiretOne } from '@/fonts/fonts';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   url: string,
-  bg: string,
+  bg?: string,
   font?: string,
 }
 
@@ -16,7 +16,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
  const LinkNext: React.FC<ButtonProps> = ({url, bg}) => {
 
   return (
-      <Link href={url} prefetch={false}
+      <Link prefetch={false} href={url} 
         className={`${poiretOne.className} flex justify-center items-center text-center w-[10rem] h-[3.5rem] p-2 rounded-[1rem] text-[#ffff] text-xl ${bg} btn_blur`}>
           próximo
       </Link>

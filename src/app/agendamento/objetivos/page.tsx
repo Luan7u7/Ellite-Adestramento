@@ -1,15 +1,9 @@
 
-import React from 'react';
-import Next from '@/components/next/Nextbtn'
-import Card from '@/components/card/Card';
-import Option from '@/components/card/Option';
-import { poiretOne, cocomat, ralewayMD } from '@/fonts/fonts';
-import Adornment from '@/components/adornment/Adornment';
-import ContainerFull from '@/components/Containers/ContainerFull';
-import LinkNext from '@/components/link/LinkNext';
-import Form from '@/components/forms/Form';
-import AlignCenter from '@/components/Containers/AlignCenter';
-
+import React from 'react'
+import Next from '@/components/Nextbtn'
+import {Card, Adornment, ContainerFull, AlignCenter, Form, Option} from '@/components'
+import { poiretOne, cocomat, ralewayMD } from '@/fonts/fonts'
+import LinkNext from '@/components/LinkNext'
 
 const Mark: React.FC =  () => {
   
@@ -85,7 +79,7 @@ const Mark: React.FC =  () => {
 
         <Next 
         name="próximo" 
-        url="/agendamento/cronograma" 
+        url="/agendamento/booking" 
         className={`${poiretOne.className} justify-center items-center w-[10rem] h-[3.5rem] text-xl mb-6 text-white rounded-[1rem] bg-[#d36d34] btn_blur`}/>
       </div>
     </div>

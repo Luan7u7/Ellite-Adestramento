@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/marks/cronograma", "src/app/marks/objetivos", "src/fonts/fonts.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/agendamento/cronograma", "src/app/agendamento/objetivos", "src/fonts/fonts.ts"],
   "exclude": ["node_modules"]
 }
