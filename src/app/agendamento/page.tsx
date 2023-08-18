@@ -1,15 +1,14 @@
 
 import React from 'react'
 import { generalProps } from '@/interfaces'
-import { AlignCenter, Container, ContainerFull } from '@/components'
+import { Container } from '@/components'
 import { Frame } from '@/components/Frame'
 
 
-type oa = Partial<generalProps>
 
 //!ATENÇÃO -> REVISAR COMPONENTES PARA ALINHAR OS ELEMENTOS NO MEIO DA TELA, ALIGNITEMS E CONTAINERFULL NÃO ESTÃO SUPRINDO ESSA NECESSIDADE!!
 
-const Agendamento: React.FC<oa> = ({children}) => {
+const Agendamento: React.FC<generalProps> = ({children}) => {
   
   
 
