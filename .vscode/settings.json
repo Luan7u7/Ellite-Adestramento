@@ -13,5 +13,7 @@
   "editor.guides.highlightActiveIndentation": "always",
   "editor.wordWrapColumn": 70,
   "notebook.output.wordWrap": false,
-  "chat.editor.wordWrap": "on"
+  "chat.editor.wordWrap": "on",
+  "material-icon-theme.folders.theme": "specific",
+  "projectManager.supportSymlinksOnBaseFolders": false
 }

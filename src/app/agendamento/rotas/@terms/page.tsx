@@ -1,17 +1,11 @@
 
 import React from 'react'
-import { generalProps } from '@/interfaces'
 import { Container } from '@/components'
 import { Frame } from '@/components/Frame'
 
 
-
-//!ATENÇÃO -> REVISAR COMPONENTES PARA ALINHAR OS ELEMENTOS NO MEIO DA TELA, ALIGNITEMS E CONTAINERFULL NÃO ESTÃO SUPRINDO ESSA NECESSIDADE!!
-
-const Agendamento: React.FC = () => {
+const terms = () => {
   
-  
-
   return (  
     <>
       <Container.Screen color='bg-[#d3d3d3]'>
@@ -48,4 +42,4 @@ const Agendamento: React.FC = () => {
   )
 }
 
-export default Agendamento;
+export default terms
