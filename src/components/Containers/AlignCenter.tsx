@@ -1,22 +1,19 @@
 
-  import { generalProps } from '@/interfaces'
-
-//* REVISAR ESSE COMPONENT, TEM MUITAS FUNÇÕES PARA UM UNICO COMPONENTE, E TA PASSANDO MUITAS PROPS QUE NÃO SÃO NECESSARIAS, DA PRA ABSTRAIR
-
-// type alignCenter = Pick<generalProps, "children" | "position" | "leftOrRight" | "topOrBottom" | "color" | "fCenter" | "rotate">
+import { ComponentProps } from 'react'
+import { generalProps } from '@/interfaces'
+import { twMerge } from 'tailwind-merge'
 
 
-export const AlignCenter: React.FC<generalProps> = (
-  
-  {children, position='relative', leftOrRight, topOrBottom, color, rotate}
+type alignCenterProps = Partial<generalProps>&ComponentProps<'div'>
+
+export const AlignCenter: React.FC<alignCenterProps> = (
+  {children, leftOrRight, topOrBottom, color, rotate, position = 'relative', gap, flex = 'items-center justify-center', className}
   ) => {
 return (
     <>
-      <div id='ALIGNCENTER' className={`${position} ${leftOrRight} ${topOrBottom} flex flex-col items-center justify-center w-4/5- Partial h-fit ${color} ${rotate} op`}>
+      <div id='ALIGNCENTER' className={twMerge(`${position} ${leftOrRight} ${topOrBottom} flex flex-col ${flex} w-11/12 h-fit ${color} ${rotate}`, className)} >
         {children}
       </div>
     </>
   )
 }
-
- 

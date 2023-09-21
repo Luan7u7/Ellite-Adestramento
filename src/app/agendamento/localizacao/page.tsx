@@ -1,27 +1,69 @@
 import React from 'react';
-import Next from '@/components/Nextbtn'
-import LinkNext from '@/components/LinkNext';
-import { didactGotic, poiretOne, ralewayEX } from '@/fonts/fonts';
 import Image from 'next/image';
-import Button from '@/components/Button';
-import {Card, Adornment, ContainerFull, AlignCenter, Form, Option} from '@/components'
+import {container} from '@/components/Containers'
+import { Button, Next } from '@/components/buttons';
+import { Card, Form, Adornment } from '@/components/assets';
 
-const MarkThird: React.FC = () => {
+const Location: React.FC = () => {
 
   
 
   return(
     <>
+      <div className='tablet:invisible animate-loading duration-75'>
+
+      </div>
       {/* 1°parte */}
-      <ContainerFull flex='flex-row'>
-
-        <AlignCenter fCenter='flex justify-around items-center'> 
-
-          <h1 className={`${poiretOne.className} relative top-[0.75rem] left-[2.125rem] text-white text-[4rem] w-[14.82rem] h-[9.75rem] leading-[3.375rem]`}>
+      <container.full className='mt-6'>
+        <container.center>
+          <h1 className={`font-PoiretOne relative text-left text-white text-[4rem] w-[14.82rem] h-fit leading-[3.375rem] -left-14`}>
             nos vamos até você
           </h1>
+        </container.center>
+      </container.full>
 
-          <AlignCenter leftOrRight='-right-[3.8rem]' topOrBottom='top-[9rem]'>
+
+      {/* 2°parte */}
+      <container.full>
+        <container.center > 
+          <container.center leftOrRight='-right-[10rem]' topOrBottom='-top-[4.5rem]' position='absolute'>
+
+            <Adornment
+            position='relative'
+            color='bg-fuzzy-wuzzy-900'
+            width='w-[10rem]'
+            height='h-[10rem]'
+            flex='flex items-center justify-center'
+            shadow='shadow-[0px_0px_14px_2px_#0000006b]'
+            round='rounded-[999px]'
+            >
+
+              <Adornment
+              position='relative'
+              color='bg-fuzzy-wuzzy-700'
+              width='w-[8rem]'
+              height='h-[8rem]'
+              flex='flex items-center justify-center'
+              shadow='shadow-[0px_0px_14px_2px_#0000006b]'
+              round='rounded-[999px]'
+              >
+
+                <Adornment
+                position='relative'
+                color='bg-fuzzy-wuzzy-500'
+                width='w-[6rem]'
+                height='h-[6rem]'
+                flex='flex items-center justify-center'
+                shadow='shadow-[0px_0px_14px_2px_#0000006b]'
+                round='rounded-[999px]'
+                >  
+
+                </Adornment>
+              </Adornment>
+            </Adornment>
+          </container.center>
+
+          <container.capsule>
             <Image
             src="/BlackLocationTag.svg"
             alt='locationTag'
@@ -29,100 +71,61 @@ const MarkThird: React.FC = () => {
             height={114}
             quality={100}
             priority={true}
-            className='z-20 absolute top-0 right-[4.7rem]'
+            className='z-20 absolute -top-[3.5rem] right-0'
             />
 
-            <Adornment
-            position='relative'
-            spanColor='bg-[#9a303699]'
-            spanW='w-[10rem]'
-            spanH='h-[10rem]'
-            fCenter='flex items-center justify-center'
-            shadow='shadow-[0px_0px_14px_2px_#0000006b]'
-            round='rounded-[999px]'
-            >
-
-              <Adornment
-              position='relative'
-              spanColor='bg-[#9c393dcc]'
-              spanW='w-[8rem]'
-              spanH='h-[8rem]'
-              fCenter='flex items-center justify-center'
-              shadow='shadow-[0px_0px_14px_2px_#0000006b]'
-              round='rounded-[999px]'
-              >
-
-                <Adornment
-                position='relative'
-                spanColor='bg-[#c85359]'
-                spanW='w-[6rem]'
-                spanH='h-[6rem]'
-                fCenter='flex items-center justify-center'
-                shadow='shadow-[0px_0px_14px_2px_#0000006b]'
-                round='rounded-[999px]'
-                >  
-
-                </Adornment>
-
-              </Adornment>
-
-            </Adornment>
-          </AlignCenter>
-          
-        </AlignCenter>
-
-      </ContainerFull>
-
-      {/* 2°parte */}
-      <ContainerFull>
-        <AlignCenter>
           <Card
-          tittle='confirme seu endereço'
+          title='confirme seu endereço'
           spacing='pt-[1rem]'
-          cardW='w-[23rem]'
-          cardH='h-fit'
-          cardBG='bg-[#afafafb1]'
+          width='w-[23rem]'
+          height='h-fit'
           size='text-[2rem]'
-          font={`${ralewayEX.className}`}
-          zI='z-10'
+          font='font-Raleway font-light'
+          index='z-10'
           >
-            <Form>
+            <Form >
               <input type="text" name="" id="" 
-              className={`${didactGotic.className} appearance-none bg-[#ffffff00] border-b w-[18rem] h-[2rem] outline-none text-white text-center `}
+              className={`font-DidactGothic appearance-none bg-[#ffffff00] border-b w-[18rem] h-[2rem] outline-none text-white text-center selection:bg-reded`}
               />
 
-              <p className={`${didactGotic.className} text-white text-base text-center w-[80%] mt-2`}>
+              <p className={`font-DidactGothic text-white text-base text-center w-[80%] mt-2`}>
                 você também pode ligar o gps que localizamos você
               </p>
 
-              <Button w='w-[11rem]' h='h-[3rem]' text='ativar localização' border='border border-white' round='rounded-[32px]' space='mt-[2.1875rem]' color='text-white' font={`${ralewayEX.className}`}/>
+              <Button
+                size='xl'
+                title='ativar'
+                className='font-PoiretOne hover:border-reded duration-1000 btn-blur'
+                typebutton='submit'
+              />
             </Form>
           </Card>
           <Adornment
-          spanW='w-[2.0625rem]'
-          spanH='h-[90%]'
-          spanColor='bg-[#c85359]'
-          spanRL='-left-1'
-          spanUB='top-[1rem]'
-          zI='z-0'
+          width='w-[2.0625rem]'
+          height='h-[90%]'
+          color='bg-reded'
+          leftOrRight='-left-1'
+          topOrBottom='top-[1rem]'
+          index='z-0'
           />
+          </container.capsule>
+        </container.center>
 
-        </AlignCenter>
-      </ContainerFull>
+      </container.full>
 
       {/* botoes */}
       <div className="flex flex-col items-center gap-3 justify-center">
 
-        <LinkNext bg='bg-[#c85359]' url='/agendamento/calendario' />
 
-        <Next 
+        <Next
         name="próximo" 
         url="/agendamento/calendario" 
-        className={`${poiretOne.className}  w-[10rem] h-[3.5rem] text-xl mb-6 text-white rounded-[1rem] bg-[#c85359] btn_blur`}/>
+        models='default'
+        className='font-PoiretOne border border-reded btn_blur hover:bg-reded duration-700 ease-out'/>
       </div>
     </>
   )
 }
 
-export default MarkThird;
+export default Location;
 

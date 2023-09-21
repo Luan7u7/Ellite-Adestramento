@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Marcellus&family=Marcellus+SC&family=Poiret+One&family=Raleway:wght@100;300;400;600&family=Work+Sans:wght@100;200;300;400;700&display=swap');
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .button{
-    @apply px-4 py-2 font-light tracking-tight rounded-md shadow-md text-zinc-200 bg-red-500
-  }
-}
+
 
 *{
   padding: 0;
@@ -18,6 +15,30 @@
   user-select: none;
   color: white;
 }
+
+::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+
+
+::-webkit-scrollbar-corner{
+  background-color: transparent;
+  
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: transparent;
+  border-radius: 16px;
+}
+
+/* barras */
+::-webkit-scrollbar-track{
+  background-color: transparent;
+  border-radius: 16px;
+  margin: 18px;
+}
+
 
 
 /* html{

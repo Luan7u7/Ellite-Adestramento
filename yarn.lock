@@ -660,11 +660,6 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.4.10.tgz#8b17783d2c09be126bbde9ff1164566517131bff"
   integrity sha512-3G1yD/XKTSLdihyDSa8JEsaWOELY+OWe08o0LUYzfuHp1zHDA8SObQlzKt+v+wrkkPcnPweoLH1ImZeUa0A1NQ==
 
-"@next/font@^13.4.5":
-  version "13.4.5"
-  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.4.5.tgz#c720fc2196557aa34330985de46a513688c9adcc"
-  integrity sha512-pjgtnnyamcFK9rv/WKr9WDmVBcd50VK4zZX9E846jowRm8FadjiumDOV80elXUtYW9GXSpAiqWqNMw/kVXNuQQ==
-
 "@next/swc-darwin-arm64@13.4.10":
   version "13.4.10"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.10.tgz#962ac55559970d1725163ff9d62d008bc1c33503"
@@ -3175,6 +3170,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lucide-react@^0.276.0:
+  version "0.276.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.276.0.tgz#b30c73f99635823019bbd0231110cb75e27845f8"
+  integrity sha512-ubP1Tyj67nsy84/ikelrFcjj7eEkD6hg9H/1Mhk22CGpbvPtEd3r8sMFQQ1YdpePx70Nt4oYIMfTPHZlag+ZLQ==
+
 lz-string@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
@@ -4062,10 +4062,17 @@ symbol-tree@^3.2.4:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
   integrity sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==
 
-tailwind-merge@^1.14.0:
+tailwind-merge@^1.13.2, tailwind-merge@^1.14.0:
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.14.0.tgz#e677f55d864edc6794562c63f5001f45093cdb8b"
   integrity sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==
+
+tailwind-variants@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/tailwind-variants/-/tailwind-variants-0.1.13.tgz#1f2a746d41e58266d900377944ca290bfa3d5256"
+  integrity sha512-G2M7M74hjq0nAo6QdEfUJgF+0t9DecFUw91GC1P9YTnwMcfB3uChT5U5e2DuNU42xoOz15lzo7r0mPdMzZkylg==
+  dependencies:
+    tailwind-merge "^1.13.2"
 
 tailwindcss@^3.3.2:
   version "3.3.2"

@@ -8,12 +8,16 @@
   "editor.wrappingIndent": "deepIndent",
   "html.format.wrapLineLength": 80,
   "workbench.editor.wrapTabs": true,
-  "workbench.colorTheme": "ceb8c11f-f736-420b-962b-fc0db26b3708",
+  "workbench.colorTheme": "Min Dark",
   "editor.autoIndent": "advanced",
   "editor.guides.highlightActiveIndentation": "always",
-  "editor.wordWrapColumn": 70,
+  "editor.wordWrapColumn": 80,
   "notebook.output.wordWrap": false,
   "chat.editor.wordWrap": "on",
   "material-icon-theme.folders.theme": "specific",
-  "projectManager.supportSymlinksOnBaseFolders": false
+  "projectManager.supportSymlinksOnBaseFolders": false,
+  "html.format.wrapAttributes": "auto",
+  
+  
+
 }

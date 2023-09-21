@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html{
+        font-size: 62.5%;
+      }
+       
+      main{
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #37373a; 
+        color:#fff ;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container{
+        width: 70%;
+        height: 60%;
+
+        background-color: #626161;
+        
+        border: 1px solid gainsboro;
+        border-radius: 2rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+      }
+
+      button{
+        width: 18rem;
+        height: 5rem;
+
+        margin-bottom: 2rem;
+
+        font-size: 1.rem;
+
+        background-color: #151414;
+        color: white;
+
+        border: 1px solid #6b6b6b;
+        border-radius: 1rem;
+      }
+
+      .palco{
+        width: 90%;
+        height: 70%;
+
+        margin-top: 2rem;
+
+        background-color: #878b87;
+        
+        border: 1px solid rgb(110, 109, 109);
+        border-radius: 2rem;
+
+        position: relative;
+
+        box-shadow:inset 0px 0px 14px #161616;
+
+      }
+
+      .contador{
+        width: 80%;
+        height: 3.5rem;
+
+        background-color: transparent;
+
+        border: 2px solid #2c2c2c;
+        border-radius: 0.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bola{
+        position: absolute;
+        border-radius: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="palco"></div>
+        <div class="contador"></div>
+        <button class="adicionar">adicionar</button>
+        <button class="remover">remover</button>
+      </div>
+    </main>
+
+    <script src="ball.js"></script>
+    <script src="game.js"></script>
+    
+  </body>
+</html>

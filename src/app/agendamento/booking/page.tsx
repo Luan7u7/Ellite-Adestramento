@@ -1,37 +1,24 @@
 //*TESTE DE RENDERIZAÇÃO PASSIVA CARREGANDO OS ITENS SEM PREJUDICAR A PERFORMANCE DA PAGINA
 import React, { Suspense, lazy } from 'react'
-import { ContainerFull, AlignCenter } from '@/components'
-import Loading from './loading'
+import { container } from '@/components/Containers'
+import { Reserved } from '@/components/Reserved'
+import { Charging } from '@/components/loaders/Charging'
 
-const Objetivos = lazy(()=>import("../objetivos/page"))
-const Cronograma = lazy(()=>import("../cronograma/page"))
-const Localizacao = lazy(()=>import("../localizacao/page"))
-const Calendario = lazy(()=>import("../calendario/page"))
+export async function Booking ()  {
 
-const Booking: React.FC = () => {
   return (
     <>
       <h1 className='text-white'>Booking</h1>
     
-      <ContainerFull>
-        <AlignCenter>
-          <Suspense fallback={<h1 className='text-zinc-100 text-3xl'>Vamos preparar o seu agendamento</h1>}>
-            <Objetivos />
+      <container.full>
+        <container.center>
+          <Suspense fallback={<Charging/>}>
+            <Reserved />
           </Suspense>
+         
 
-          <Suspense fallback={<Loading/>}>
-            <Cronograma/>
-          </Suspense>
-
-          <Suspense fallback={<Loading/>}>
-            <Localizacao/>
-          </Suspense>
-
-          <Suspense fallback={<Loading/>}>
-            <Calendario/>
-          </Suspense>
-        </AlignCenter>
-      </ContainerFull>
+        </container.center>
+      </container.full>
     </>
   )
 }

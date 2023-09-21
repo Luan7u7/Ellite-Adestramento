@@ -1,30 +1,27 @@
+import { AriaAttributes, DOMAttributes, StyleHTMLAttributes } from "react";
 
-export interface generalProps{
-  tittle?: string,
-  color?: string,
+export interface generalProps {
+  title?: string,
+  color?: string | undefined,
   border?: string,
   children?: React.ReactNode,
-  cardW?: string,
-  cardH?: string,
-  cardBG?: string,
-  spanColor?: string,
-  spanUB?: string,
-  spanRL?: string,
-  spanW?: string,
-  spanH?: string,
+  width?: string,
+  height?: string,
   position?: "absolute"|"relative",
   topOrBottom?: string,
   leftOrRight?: string,
   round?: string,
-  zI?: string,
+  index?: string,
   shadow?: string,
-  fCenter?: string,
-  col_center?: string,
+  flex?: string,
   size?: string,
   font?: string,
+  padding?: string,
   spacing?: string,
   gap?: string,
   rotate?: string,
+  url?: string,
+  typebutton?: 'button' | 'reset' | 'submit',
   
 }
 

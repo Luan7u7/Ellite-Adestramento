@@ -1,7 +1,7 @@
 import { render, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { Teste } from '../components/Calendario'
-import Calendario from '../components/Calendario'
+import { Teste } from '../components/assets/Calendario'
+import Calendario from '../components/assets/Calendario'
 
 describe('teste1', () => {
   it('is button left is rendered', () => {
