@@ -25,7 +25,7 @@ module.exports = {
         WorkSans: 'Work Sans',
       },
 
-      colors: {  
+      colors: {
         markOrange : '#d36d34',
         greened  : "#72997299",
         reded: '#c85359',
@@ -91,8 +91,6 @@ module.exports = {
         '950': '#1c264f',
         },
 
-
-
         'laurel': {
           default: '#5b8b81',
           '50': '#e4eaec',
@@ -107,6 +105,50 @@ module.exports = {
           '900': '#22392c',
           '950': '#14241a',
         },
+
+        'color': {
+          'red': '#ff3b30',
+          'redDark': '#ff453a',
+          'orange': '#FF9500',
+          'orangeDark': '#FF9F0A',
+          'yellow': '#FFCC00',
+          'yellowDark': '#FFD60A',
+          'green': '#34C759',
+          'greenDark': '#30D158',
+          'blue': '#007AFF',
+          'blueDark': '#0A84FF',
+          'grayLight': '#F2F2F7',
+          'grayDark': '#3A3A3A',
+          'midblack': '#2C2C2E',
+          'dark': '#1C1C1C',
+        },
+
+        'materialLight': {
+          'regular1ColorDodge': '#8C8C8C',
+          'regular2': '#252525d2',
+          'thin1Overlay': '#9C9C9C',
+          'thin2': '#252525b2',
+        },
+
+        'materialDark':{
+          'regular1Overlay': '#383838',
+          'regular2': ' #b3b3b3d0',
+          'thin1ColorDodge': '#333333',
+          'thin2': '#a6a6a6b2',
+        },
+
+        'backgrounds':{
+          'darkBG': '#00000098',
+          'lightBG': '#00000067',
+          'ccBG': '#CCCCCC',
+          'dark': '#1C1C1C',
+          'darkOpaque': '#8C8C8C, #252525d2' ,
+        },
+
+        'separators': {
+          'nonOpaque': '#3C3C43',
+          'nonOpaqueDark': '#545458',
+        }
 
       },
 
@@ -132,18 +174,24 @@ module.exports = {
           // '30%': { backgroundPosition: '70%'},
           // '70%': { backgroundPosition: '30%'},
           '100%': { backgroundPosition: '0%' },
+        },
+        opacity: {
+          '0%': { opacity: '0'},
+          '100%': { opacity: '1'}
         }
       },
 
       animation: {
-        loading: 
+        loading:
           'loadpage 1s cubic-bezier(.645,.045,.355,1.000) both',
-        lateral: 
+        lateral:
           'popUpLateral 1s cubic-bezier(.645,.045,.355,1.000) both',
-        skeleton: 
+        skeleton:
           'skeleton 1.4s alternate infinite ease-in-out',
+        opacity:
+          'opacity 0.6s cubic-bezier(.645,.045,.355,1.000)'
       }
-      
+
     },
   },
   plugins: [],

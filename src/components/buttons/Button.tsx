@@ -5,6 +5,8 @@ import { simple_button } from '@/functions/button';
 import { generalProps } from '@/interfaces';
 import React, { ComponentProps } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
+import { useModal } from '@/hooks';
+import { Imodal } from '@/interfaces';
 
 type buttonProps = generalProps & ComponentProps<'button'> & VariantProps<typeof button>
 
@@ -27,14 +29,15 @@ const button = tv ({
   }
 })
 
-export const Button: React.FC<buttonProps> = ({url, size, className, typebutton = 'submit', title, children}) => {
+export const Button: React.FC<buttonProps> = ({url, size, className, typebutton = 'submit', title, children, onClick, ...rest}) => {
 
-
+  const {modal, show} = useModal()
 
   return (
     <>
       <button
-      onClick={()=>simple_button}
+      onClick={show}
+      {...rest}
       type={typebutton}
       className={button({size,className})}>
         {children}

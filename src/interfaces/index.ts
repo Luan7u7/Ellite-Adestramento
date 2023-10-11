@@ -22,10 +22,13 @@ export interface generalProps {
   rotate?: string,
   url?: string,
   typebutton?: 'button' | 'reset' | 'submit',
-  
+
 }
 
 export interface Imodal{
   isOpen: boolean,
-  setOpen: (isOpen: boolean) => void
+  setOpen: (isOpen: boolean) => void,
+  children?: React.ReactNode,
+  title?: string,
+  content?: string,
 }

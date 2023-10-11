@@ -1,36 +1,37 @@
-import { generalProps, Imodal } from '@/interfaces'
-import React from 'react'
+
+import React, { MouseEventHandler, useState } from 'react'
+import { modal } from '.'
 
 //* ESSE COMPONENTE VAI ENCAPSULAR TODO CONTEUDO QUE PRECISAR DE UM TAMANHO ESPECIFICO COMO O CARD POR EXEMOPLO
-interface capsuleProps{
-  isOpen: boolean,
-  setOpen: (isOpen: boolean) => void,
-  children: React.ReactNode
+
+export type modal = {
+  children?: React.ReactNode,
+  open?: boolean,
+  onClose?: MouseEventHandler,
+  setOpen?: any,
 }
 
-export const Modal = ({children, isOpen, setOpen}:capsuleProps) => {
-  if(isOpen){
-    return (
-      <>
-        <div className='fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-75 flex flex-col justify-start items-center '>
+export const Modal = ({open, setOpen, onClose}: modal) => {
 
-          <div className='w-fit h-fit flex flex-col justify-center items-center '>
 
-            <div className='relative top-12 flex flex-col items-center justify-center gap-6 w-[23rem] h-[32rem] rounded-[2rem] bg-gray-700 shadow-2xl shadow-slate-900 animate-lateral overflow-hidden  bg-cover'>
+  if(!open) return <></>;
 
-              {children}
-                         
-              <button onClick={()=>setOpen(!open)} className='fixed bottom-4 right-6  text-white'>
-                fechar
-              </button>
+  return (
+    <>
+      <modal.overlay>
 
-            </div>
+        <modal.content>
 
-          </div>
 
-        </div>
-      </>
-    )
-  }
-  return null
-} 
+          <button onClick={setOpen} className='w-full h-14 absolute bottom-0 border-separators-nonOpaqueDark border-t flex justify-center items-center'>
+
+            <span className='text-color-blueDark'>baixar app</span>
+          </button>
+
+
+        </modal.content>
+
+      </modal.overlay>
+    </>
+  );
+}

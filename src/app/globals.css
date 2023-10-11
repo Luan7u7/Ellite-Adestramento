@@ -24,7 +24,7 @@
 
 ::-webkit-scrollbar-corner{
   background-color: transparent;
-  
+
 }
 
 ::-webkit-scrollbar-thumb{
@@ -56,7 +56,7 @@
   background: linear-gradient(187.89deg, rgb(108, 38, 22, 0.5) 75.44%, rgba(24, 4, 0, 0.1) 108.82%);
   filter: blur(50px);
   border-radius: 100px;
-  
+
 }
 
 .btn_blur{
@@ -151,3 +151,5 @@
   border-radius: 4px;
   color: white;
 }
+
+

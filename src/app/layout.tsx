@@ -1,15 +1,25 @@
+import { useContext } from 'react'
 import './globals.css'
+import { authContext } from '@/auth/authContext'
+import { QueryClientProvider } from 'react-query/types/react'
+import { queryClient } from '@/server/queryClient'
 
 export const metadata = {
   title: 'Ellite Adestramento',
-  description: 'educando você e seu pet',
+  description: 'empresa de adestramento de cães',
 }
 
-export default function RootLayout({children,}: {children: React.ReactNode}){
+export default function RootLayout({children}: {children: JSX.Element}){
+
+  const auth = useContext(authContext)
+
   return (
     <html lang="pt">
       <body className='my-0 mx-auto'>
+        <QueryClientProvider client={queryClient}>
           {children}
+
+        </QueryClientProvider>
       </body>
     </html>
   )
