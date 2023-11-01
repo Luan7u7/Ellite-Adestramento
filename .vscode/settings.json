@@ -8,7 +8,7 @@
   "editor.wrappingIndent": "deepIndent",
   "html.format.wrapLineLength": 80,
   "workbench.editor.wrapTabs": true,
-  "workbench.colorTheme": "Min Dark",
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "workbench.tree.indent": 16,
   "editor.autoIndent": "advanced",
   "editor.guides.highlightActiveIndentation": "always",
