@@ -1,7 +1,11 @@
 {
   "clientes": [
     {
+      "id":1, "name":"Suzana", "cão":"douglas", "idade do pet": "2 anos"
+    },
     
+    {
+      "id":2, "name":"Rafaela", "cao":"peter", "idade do pet": "1 anos"
     }
   ]
 }

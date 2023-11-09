@@ -3,7 +3,7 @@ import { useApi } from '@/hooks/api/useApi'
 import { User } from '@/types/api/User'
 import { authContext } from './authContext'
 
-export const authProvider = ({ children }: {children: JSX.Element}) => {
+export const AuthProvider = ({ children }: {children: JSX.Element}) => {
 
   const [user, setUser] = useState<User | null>(null)
 
